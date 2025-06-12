@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.13"><link href="/didattica/visualizer.css" rel="stylesheet"><title>Astro</title></head> <body> <div id="buttons"> <button id="code_exec">▶️</button> <button id="next_exec" disabled>⏭️</button> <button id="stop_exec" disabled>❌</button> <button id="inject_btn">💉</button> <button id="visualizer_btn" disabled>📊</button> <button id="refresh_btn">🔄️</button> <button id="dynamic_btn">🤚</button> <button id="all_breakpoints">🛑</button> </div> <div id="main_div"> <div id="code_editor"></div> <div id="debug_editor" class="closed"></div> <div id="visualizer" class=""> <div id="context"></div> </div> </div> <style>
+			body {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			#main_div{
+				display: flex;
+				width: 95dvw;
+				height: 93dvh;
+				border: 1px solid red;
+				flex-direction: row;
+			}
+
+			#code_editor{
+				align-self:flex-start;
+				width: 40%;
+				height: 100%;
+			}
+
+			#code_editor>div, #debug_editor>div{
+				width: 100%;
+				height: 100%;
+			}
+
+			#debug_editor, #visualizer{
+				display: flex;
+				flex-grow: 1;
+				height: 100%;
+			}
+			.closed{
+				visibility: collapse;
+			}
+
+			#buttons{
+				display: flex;
+				flex-direction: row;
+				border: 1px solid black;
+				border-radius: 2px;
+				width: 95dvw;
+				height: 30px;
+			}
+			#buttons>button{
+				margin-inline-end: 10px;
+				font-size: small;
+				aspect-ratio: 1/1;
+			}
+			#code_exec.executing{
+				border-color: green;
+				border-radius: 10px;
+				opacity: 50%;
+			}
+
+			#visualizer_btn:disabled, #inject_btn:disabled, #next_exec:disabled, #stop_exec:disabled{
+				opacity: 40%;
+			}
+
+</style> <script type="module" src="/didattica/_astro/esempio02.astro_astro_type_script_index_0_lang.Dysr8A2a.js"></script> </body> </html>
