@@ -1,0 +1,41 @@
+---
+import EditorComponent from "../../components/editor_component.astro"
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="/didattica/visualizer.css" rel="stylesheet">
+		<title>Astro</title>
+	</head>
+	<body>
+		
+		<EditorComponent />
+		<script>
+			import { main_proc } from "../../scripts/babel_test";
+
+const code = `let x = 10;
+function f(){
+  console.log("Scope di f");
+  let x = 20;
+  g();
+  return;
+}
+
+function g(){
+  console.log("In g x vale", x);
+  return;
+}
+
+console.log("Main scope");
+g();
+f();`;
+			main_proc(code);
+		</script>
+		
+	</body>
+</html>
+
+

@@ -1,0 +1,93 @@
+#visualizer{
+    /*border : 3px solid lightskyblue;*/
+    flex-direction: row;
+}
+
+#tree{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 100%;
+    width: 20%;
+    /*border: 3px solid lightcoral;*/
+    border: 1px solid black;
+}
+
+#tree>span{
+    align-self:flex-start;
+}
+
+#tree>span>button{
+    
+    border-color: transparent;
+}
+
+#context{
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    /*border: 3px solid purple;*/
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.treeElement>span{
+    align-self: flex-start;
+    margin: 2px;
+    font-family: monospace;
+    font-weight: bolder;
+    color : blue;
+    /*-webkit-text-stroke: 0.2px black;*/
+}
+
+.treeElement.varElement>span{
+    color: black;
+    font-weight: normal;
+    -webkit-text-stroke : unset;
+}
+
+.treeElement.varElement.const>span{
+    color: darkblue;
+    font-weight: bold;
+}
+
+.treeElement{
+    flex-direction: column;
+    display: flex;
+    align-items: end;
+    border-left: 1px solid black;
+    width: 90%;
+}
+
+.card{
+    display: flex;
+    /*flex:1;*/
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: start;
+    margin-inline: 2px;
+    margin-bottom: 2px;
+}
+
+.card_title{
+    font-family: monospace;
+    font-weight: bold;
+    color : blue;
+    -webkit-text-stroke: 0.2px black;
+    margin-left: 5px;
+}
+
+.card_vars{
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+    font-weight: bold;
+    -webkit-text-stroke: 0.2px black;
+    margin-left : 10px;
+    color : darkblue;
+
+}
+
+.card_childs{
+    display: flex;
+}

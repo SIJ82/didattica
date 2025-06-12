@@ -1,0 +1,35 @@
+---
+import EditorComponent from "../../components/editor_component.astro"
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="/didattica/visualizer.css" rel="stylesheet">
+		<title>Astro</title>
+	</head>
+	<body>
+		
+		<EditorComponent />
+		<script>
+			import { main_proc } from "../../scripts/babel_test";
+
+const code = `let global_x = 10;
+
+function f(){
+  let local_x = 20;
+
+  console.log("Variabile locale", local_x);
+}
+
+console.log("Variabile globale", global_x);
+f();`;
+			main_proc(code);
+		</script>
+		
+	</body>
+</html>
+
+

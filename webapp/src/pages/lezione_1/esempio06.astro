@@ -1,0 +1,45 @@
+---
+import EditorComponent from "../../components/editor_component.astro"
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="/didattica/visualizer.css" rel="stylesheet">
+		<title>Astro</title>
+	</head>
+	<body>
+		
+		<EditorComponent />
+		<script>
+			import { main_proc } from "../../scripts/babel_test";
+
+const code = `let iva = 0.0;
+
+function pagamento( prezzo ){
+  let totale = prezzo + (prezzo * iva);
+  return totale;
+}
+
+function italia( prezzo ){
+  let iva = 0.22;
+  return pagamento( prezzo );
+}
+
+function germania( prezzo ){
+  let iva = 0.19;
+  return pagamento( prezzo );
+}
+
+console.log( italia(100) );
+console.log( germania(100) );
+`;
+			main_proc(code);
+		</script>
+		
+	</body>
+</html>
+
+
