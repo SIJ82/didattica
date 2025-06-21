@@ -1,4 +1,4 @@
-import{m as l}from"./babel_test.BCX0R-xq.js";const o=`let global_x = 10;
+import{m as l}from"./babel_test.DqCd0q3g.js";const o=`let global_x = 10;
 
 function f(){
   let local_x = 20;

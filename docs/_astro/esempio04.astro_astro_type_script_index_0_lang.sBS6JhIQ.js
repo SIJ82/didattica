@@ -1,4 +1,4 @@
-import{m as o}from"./babel_test.BCX0R-xq.js";const l=`let saldo = 1000;
+import{m as o}from"./babel_test.DqCd0q3g.js";const l=`let saldo = 1000;
 let tassoInteresse = 0.02;
 
 function calcolaInteressi() {

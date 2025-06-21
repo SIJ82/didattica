@@ -1,4 +1,4 @@
-import{m as n}from"./babel_test.BCX0R-xq.js";const s=`function fib(sn){
+import{m as n}from"./babel_test.DqCd0q3g.js";const s=`function fib(sn){
     if(n<=1){
         const res = 1
         return res;

@@ -1,4 +1,4 @@
-import{m as o}from"./babel_test.BCX0R-xq.js";const n=`let x = 10;
+import{m as o}from"./babel_test.DqCd0q3g.js";const n=`let x = 10;
 
 function f(){
   let x = 20;

@@ -1,4 +1,4 @@
-import{m as n}from"./babel_test.BCX0R-xq.js";const e=`const pi = 3.14159;
+import{m as n}from"./babel_test.DqCd0q3g.js";const e=`const pi = 3.14159;
 
 function piValue(){
   console.log("Pi vale ", pi);
