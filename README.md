@@ -53,9 +53,6 @@ Questa attività può rientrare in un percorso più in cui si analizzano i vari 
 - Passaggio di parametri
 - Stack frame
 
-## Grandi idee
-Visualizzare i frame delle funzioni come dei fogli di carta che si sovrappongono seguendo protocolli diversi in base allo scope.
-
 ## Traguardi e Obiettivi
 
 ### Traguardi/obiettivi generali dai documenti ministeriali/proposte
@@ -64,7 +61,7 @@ problematiche elaborando opportune soluzioni [2]
 - scegliere dispositivi e strumenti in base alle loro caratteristiche funzionali [2]
 
 ### Traguardi/obiettivi generali
-E' possibile (ma non obbligatorio e non sempre necessario) aggiungere i propri traguardi e obiettivi generali
+- Visualizzare i frame delle funzioni come dei fogli di carta che si sovrappongono seguendo protocolli diversi in base allo scope.
 
 ### Obiettivi specifici in forma operativa
 - (Comprendere)[3] Lo studente/la studentessa è in grado di descrivere il comportamento di un programma con scope statico e dinamico

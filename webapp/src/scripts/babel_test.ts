@@ -7,6 +7,7 @@ import { generate } from 'astring';
 import { Set_Breakpoints } from './set_breakpoints';
 import { Frame_Creation, Frame_Deletion, InjectStack, stack_options } from './stack';
 import { Set_Nesting } from './set_nesting';
+import { konsole } from './konsole';
 
 const code_editor = document.getElementById("code_editor") as HTMLDivElement;
 const debug_editor = document.getElementById("debug_editor") as HTMLDivElement;
@@ -72,6 +73,7 @@ async function On_Code_Exec() {
     code_exec.disabled = true;     
     code_exec.classList.add("executing");
     refresh_btn.disabled = true;//@ts-ignore    
+    window.konsole = konsole(console); //@ts-ignore
     window._lineInfo = _lineInfo; // @ts-ignore
     window._line_Info_Hook = lineInfo;// @ts-ignore
     window._on_end_execution = On_EndExecution; //@ts-ignore

@@ -26,6 +26,8 @@ function copyFunctionInNode(node : FunctionDeclaration, fun: FunctionDeclaration
 
 function Wrap(ast : Program) : Program{
     const wrapper = parse(`
+const console = window.konsole;
+console.clear();
 try{
 }catch (e){
     console.error("Errore durante l'esecuzione");
@@ -34,7 +36,7 @@ try{
         `, optionParse);
 
     //@ts-ignore
-    const tryStatement : TryStatement = wrapper.body[0];
+    const tryStatement : TryStatement = wrapper.body[2];
     //@ts-ignore
     tryStatement.block.body = ast.body;
     console.log("Wrapper ", wrapper);

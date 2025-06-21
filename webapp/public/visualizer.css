@@ -31,6 +31,41 @@
     justify-content: center;
 }
 
+#konsole_wrapper{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #f0f0f0;
+    border : 1px solid green;
+    margin: 15px;
+    padding-block: 10px;
+    width: 900px;
+    height: 100px;
+    resize: both; /* Permette il ridimensionamento orizzontale e verticale */
+    overflow:hidden;
+    transform: rotate(180deg);
+}
+
+#konsole{
+    transform: rotate(-180deg);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: scroll;
+    
+}
+
+#konsole>div{
+    border : 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    padding-inline: 5px;
+}
+#konsole>div>pre{
+    margin: 1px;
+}
 .treeElement>span{
     align-self: flex-start;
     margin: 2px;
