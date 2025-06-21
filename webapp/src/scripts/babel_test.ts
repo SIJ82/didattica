@@ -8,6 +8,7 @@ import { Set_Breakpoints } from './set_breakpoints';
 import { Frame_Creation, Frame_Deletion, InjectStack, stack_options } from './stack';
 import { Set_Nesting } from './set_nesting';
 import { konsole } from './konsole';
+import { downloadTextFile, openAndReadTextFile } from './filemanager';
 
 const code_editor = document.getElementById("code_editor") as HTMLDivElement;
 const debug_editor = document.getElementById("debug_editor") as HTMLDivElement;
@@ -24,6 +25,8 @@ const refresh_btn = document.getElementById("refresh_btn") as HTMLButtonElement;
 const all_breakpoints_btn = document.getElementById("all_breakpoints") as HTMLButtonElement;
 const stop_exec_btn = document.getElementById("stop_exec") as HTMLButtonElement;
 const dynamic_btn = document.getElementById("dynamic_btn") as HTMLButtonElement;
+const save_btn = document.getElementById("save_btn") as HTMLButtonElement;
+const open_btn = document.getElementById("open_btn") as HTMLButtonElement;
 
 async function _lineInfo(line_no, line, stopEx=false){
         //@ts-ignore
@@ -218,6 +221,15 @@ async function On_Dynamic_btn() {
 
 }
 
+async function On_Save_Btn() {
+    downloadTextFile(Editor.code, `file.js`);
+}
+
+async function On_Open_Btn() {
+    const code = await  openAndReadTextFile();
+    Editor.setCode(code);
+}
+
 export async function main_proc(code : string =undefined) {
     
 
@@ -233,6 +245,8 @@ export async function main_proc(code : string =undefined) {
     all_breakpoints_btn.onclick = On_All_breakpoints;
     stop_exec_btn.onclick = On_Stop_Exec_Button;
     dynamic_btn.onclick = On_Dynamic_btn;
+    save_btn.onclick = On_Save_Btn;
+    open_btn.onclick = On_Open_Btn;
 }
 
 //main_proc(`ciao`);
