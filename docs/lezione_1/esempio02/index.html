@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.13"><link href="/didattica/visualizer.css" rel="stylesheet"><title>Astro</title></head> <body> <div id="buttons"> <button id="code_exec">▶️</button> <button id="next_exec" disabled>⏭️</button> <button id="stop_exec" disabled>❌</button> <button id="inject_btn">💉</button> <button id="visualizer_btn" disabled>📊</button> <button id="refresh_btn">🔄️</button> <button id="dynamic_btn">🤚</button> <button id="all_breakpoints">🛑</button> <button id="save_btn">💾</button> <button id="open_btn">📤</button> </div> <div id="main_div"> <div id="code_editor"></div> <div id="debug_editor" class="closed"></div> <div id="visualizer" class=""> <div id="context"></div> </div> <div id="konsole_wrapper"> <div id="konsole"> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> <div>ciao</div> </div> </div> </div> <style>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.13"><link href="/didattica/visualizer.css" rel="stylesheet"><title>Astro</title></head> <body> <div id="buttons"> <button id="code_exec"><label>▶️</label></button> <button id="next_exec" disabled><label>⏭️</label></button> <button id="stop_exec" disabled><label>❌</label></button> <button id="inject_btn"><label>💉</label></button> <button id="visualizer_btn" disabled><label>📊</label></button> <button id="refresh_btn"><label>🔄️</label></button> <button id="dynamic_btn"><label>🤚</label></button> <button id="all_breakpoints"><label>🛑</label></button> <button id="save_btn"><label>💾</label></button> <button id="open_btn"><label>📤</label></button> <a href="/didattica/docs" target="_blank"><label>ℹ️</label></a> </div> <div id="main_div"> <div id="code_editor"></div> <div id="debug_editor" class="closed"></div> <div id="visualizer" class=""> <div id="context"></div> </div> <div id="konsole_wrapper"> <div id="konsole"> <div>This is the output console</div> </div> </div> </div> <style>
 			body {
 				margin: 0;
 				padding: 0;
@@ -44,11 +44,27 @@
 				width: 95dvw;
 				height: 30px;
 			}
-			#buttons>button{
+			#buttons>button, #buttons>a{
 				margin-inline-end: 10px;
-				font-size: small;
 				aspect-ratio: 1/1;
+				display: flex;
+				border: 1px solid black;
+				border-radius: 5px;
+				
 			}
+			
+			#buttons>*>label{
+				position: relative;
+				top: 50%;
+				left: 50%;
+				font-size: x-large;
+				transform: translate(-50%, -65%);
+			}
+
+			#buttons>a>label{
+				transform: translate(-50%, -60%);
+			}
+
 			#code_exec.executing{
 				border-color: green;
 				border-radius: 10px;

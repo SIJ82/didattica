@@ -120,3 +120,14 @@
                 font-size: 2rem;
             }
         }
+
+        #upper_group{
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #upper_group>div{
+            width: 500px;
+        }

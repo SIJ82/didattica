@@ -1,0 +1,26 @@
+---
+import EditorComponent from "../components/editor_component.astro"
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="/didattica/visualizer.css" rel="stylesheet">
+		<title>Fibonacci example</title>
+	</head>
+	<body>
+		
+		<EditorComponent />
+		<script>
+			import { main_proc } from "../scripts/babel_test";
+
+const code = `console.log("Hello students!")`;
+			main_proc(code);
+		</script>
+		
+	</body>
+</html>
+
+
