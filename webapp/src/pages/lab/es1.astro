@@ -1,0 +1,44 @@
+---
+import LabEditorComponent from "../../components/lab_editor_component.astro"
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="/didattica/visualizer.css" rel="stylesheet">
+		<title>Laboratorio 1</title>
+	</head>
+	<body>
+		
+		<LabEditorComponent />
+		<script>
+			import { Lab_main } from "../../scripts/lab_main";
+
+const code = `function fib(sn){
+    if(n<=1){
+        const res = 1
+        return res;
+    }else{
+        bp;
+        const left = fib(n-1);
+        bp;
+        const right = fib(n-2);
+        bp;
+        const res = left + right;
+        return res;
+    }
+}
+
+bp;
+const res = fib(4);
+bp;
+console.log(res);`;
+			Lab_main(code);
+		</script>
+		
+	</body>
+</html>
+
+
