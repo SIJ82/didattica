@@ -150,7 +150,7 @@ async function On_file_inputChange(event : Event){
 
   reader.onload = (readerEvent: ProgressEvent<FileReader>) => {
     if (readerEvent.target && typeof readerEvent.target.result === 'string') {
-        const loaded_code = readerEvent.target.result.split("<tests>");
+        const loaded_code = readerEvent.target.result.split("#test_cases");
         const obfuscate = document.getElementById("obfuscate");
         obfuscate.parentElement.removeChild(obfuscate);
 
