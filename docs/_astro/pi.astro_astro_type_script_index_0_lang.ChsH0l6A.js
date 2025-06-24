@@ -1,4 +1,4 @@
-import{m as n}from"./babel_test.DqCd0q3g.js";const e=`const pi = 3.14159;
+import{m as i}from"./babel_test.DPD2IrOL.js";import"./konsole.1Z1AgOxG.js";const n=`const pi = 3.14159;
 
 function piValue(){
   console.log("Pi vale ", pi);
@@ -19,4 +19,4 @@ function Ingegnere(){
 
 piValue();
 Informatico(1, " ciao");
-Ingegnere();`;n(e);
+Ingegnere();`;i(n);

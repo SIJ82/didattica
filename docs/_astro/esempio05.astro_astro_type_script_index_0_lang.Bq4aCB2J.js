@@ -1,4 +1,4 @@
-import{m as o}from"./babel_test.DqCd0q3g.js";const n=`let x = 10;
+import{m as o}from"./babel_test.DPD2IrOL.js";import"./konsole.1Z1AgOxG.js";const n=`let x = 10;
 function f(){
   console.log("Scope di f");
   let x = 20;

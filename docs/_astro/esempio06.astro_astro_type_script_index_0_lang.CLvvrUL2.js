@@ -1,4 +1,4 @@
-import{m as o}from"./babel_test.DqCd0q3g.js";const e=`let iva = 0.0;
+import{m as o}from"./babel_test.DPD2IrOL.js";import"./konsole.1Z1AgOxG.js";const e=`let iva = 0.0;
 
 function pagamento( prezzo ){
   let totale = prezzo + (prezzo * iva);

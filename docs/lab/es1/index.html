@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.13"><link href="/didattica/visualizer.css" rel="stylesheet"><title>Laboratorio 1</title></head> <body> <div id="buttons"> <button id="code_exec"><label>▶️</label></button> <button id="next_exec" disabled><label>⏭️</label></button> <button id="stop_exec" disabled><label>❌</label></button> <button id="inject_btn"><label>💉</label></button> <button id="visualizer_btn" disabled><label>📊</label></button> <button id="refresh_btn"><label>🔄️</label></button> <button id="dynamic_btn"><label>🤚</label></button> <button id="all_breakpoints"><label>🛑</label></button> <button id="save_btn"><label>💾</label></button> <button id="open_btn"><label>📤</label></button> <a href="/didattica/docs" target="_blank"><label>ℹ️</label></a> </div> <div id="main_div"> <div id="editor_div"></div> <div id="debug_editor_div" class="closed"></div> <div id="visualizer" class=""> <div id="context"></div> </div> <div id="konsole_wrapper"> <div id="konsole"> <div>This is the output console</div> </div> </div> </div> <style>
+			body {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			#main_div{
+				display: flex;
+				width: 95dvw;
+				height: 93dvh;
+				border: 1px solid red;
+				flex-direction: row;
+			}
+
+			#editor_div{
+				align-self:flex-start;
+				width: 40%;
+				height: 100%;
+			}
+
+			#editor_div>div, #debug_editor_div>div{
+				width: 100%;
+				height: 100%;
+			}
+
+			#debug_editor_div, #visualizer{
+				display: flex;
+				flex-grow: 1;
+				height: 100%;
+			}
+			.closed{
+				visibility: collapse;
+			}
+
+			#buttons{
+				display: flex;
+				flex-direction: row;
+				border: 1px solid black;
+				border-radius: 2px;
+				width: 95dvw;
+				height: 30px;
+			}
+			#buttons>button, #buttons>a{
+				margin-inline-end: 10px;
+				aspect-ratio: 1/1;
+				display: flex;
+				border: 1px solid black;
+				border-radius: 5px;
+				
+			}
+			
+			#buttons>*>label{
+				position: relative;
+				top: 50%;
+				left: 50%;
+				font-size: x-large;
+				transform: translate(-50%, -65%);
+			}
+
+			#buttons>a>label{
+				transform: translate(-50%, -60%);
+			}
+
+			#code_exec.executing{
+				border-color: green;
+				border-radius: 10px;
+				opacity: 50%;
+			}
+
+			#visualizer_btn:disabled, #inject_btn:disabled, #next_exec:disabled, #stop_exec:disabled{
+				opacity: 40%;
+			}
+
+</style> <script type="module" src="/didattica/_astro/es1.astro_astro_type_script_index_0_lang.Bxs1e73Y.js"></script> </body> </html>

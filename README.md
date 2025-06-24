@@ -18,17 +18,12 @@ Disciplina : Informatica
 
 Livello : Secondo biennio e quinto anno
 
-A chi è rivolta questa attività?
-
-- L'attività è principalmente orientata agli ultimi anni di un indirizzo informatico, ma può essere svolta anche in altri indirizzi se ci sono sufficenti ore di Informatica e vengono soddisfatti i prerequisiti descritti di seguito nel documento.
+L'attività è principalmente orientata agli ultimi anni di un indirizzo informatico, ma può essere svolta anche in altri indirizzi se ci sono sufficenti ore di Informatica e vengono soddisfatti i prerequisiti descritti di seguito nel documento.
 
 
 ## Motivazione e Finalità
-Spiegare brevemente (una sola frase) di che attività si tratta.
-
 - L'attività presenta le principali differenze tra scope statico e dinamico nei linguaggi di programmazione, tramite lezioni frontali, attività unplugged e attività di laboratorio.
 
-Perché è importante svolgere questa attività nella scuola?
 - Questa attività approfondisce concetti relaivi ai linguaggi di programmazione e il loro uso. 
 La maggior parte dei linguaggi di programmazione utilizza scope statico e spesso è l'unico presentato agli studenti. Con questa attività si mira a rafforzare il modello mentale[4] associato all'esecuzione del codice e correggere eventuali misconcezioni[4] analizzando il comportamento dei due scope a confronto.
 
@@ -41,11 +36,11 @@ Inoltre sono state progettate delle attività unplugged per dare un idea concret
 
 
 ## Prerequisiti
-- Programmazione base in javascript (variabili, funzioni, confizionali, cicli)
+- Programmazione base in javascript (variabili, funzioni, condizionali, cicli)
 
 
 ### Percorso
-Questa attività può rientrare in un percorso più in cui si analizzano i vari aspetti dei linguaggi di programmazione (paradigmi, casi d'uso, sintassi), ma può anche essere trattata da sola per rafforzare la comprensione di un linguaggio di programmazione (in questo caso javascript).
+Questa attività può rientrare in un percorso in cui si analizzano i vari aspetti dei linguaggi di programmazione (paradigmi, casi d'uso, sintassi), ma può anche essere trattata da sola per rafforzare la comprensione di un linguaggio di programmazione (in questo caso javascript).
 
 
 ## Contenuti (spiegati a un informatico)
@@ -71,7 +66,7 @@ problematiche elaborando opportune soluzioni [2]
 
 ## Metodologie didattiche
 - Lezione frontale : il docente presenta gli argomenti con l'ausilio delle slide, durante la lezione si pongono domande agli studenti per riprendere l'attenzione e risolvere eventuali dubbi
-- Cooperative learning : durante le attività unplugged e di laboratorio previste si invoglia gli studenti a collaborare per risolvere esercizi
+- Collaborative learning : durante le attività unplugged e di laboratorio previste si invoglia gli studenti a collaborare per risolvere esercizi
 - Unplugged : si insegnano concetti informatici senza l'uso di un computer[5], in questo caso con dei fogli di carta
 
 - Si mira a rafforzare la macchina concettuale[4] relativa all'esecuzione di codice e correggere misconcezioni comuni derivanti dal solo uso dello scope statico
@@ -86,7 +81,7 @@ Classe, laboratorio di informatica
 
 ## Materiali e Strumenti
 - Aula con proiettore
-- Computers con un qualsiasi browser installato (per le attività di laboratorio)
+- Computer con un qualsiasi browser installato (per le attività di laboratorio)
 - Fogli di carta per l'attività unplugged
 - L'applicazione web sviluppata
 
@@ -218,7 +213,7 @@ Se gli studenti riescono a creare e descrivere comportamenti di programmi con sc
 ![slide 30](./media/slide_30.png)\
 
 ### Seconda lezione
-Nella prima lezione abbiamo introdotto i concetti di ambiente e scope dinamico, ora ci soffermiamo sullo scope dinamico
+Nella prima lezione abbiamo introdotto i concetti di ambiente e scope statico, ora ci soffermiamo sullo scope dinamico
 
 ![slide 31](./media/slide_31.png)\
 
@@ -292,8 +287,9 @@ Possono seguire attività di laboratorio ricollegandosi ad altri argomenti svolt
 - Static binding e dynamic bynding
 
 ### Valutazione
-Poichè durante le lezioni si hanno attività interattive e unplugged si riesce ad avere un feedback costante da parte degli studenti, questo facilità la verifica del raggiungimento deli obbiettivi di apprendimento.
+Poichè durante le lezioni si hanno attività interattive e unplugged si riesce ad avere un feedback costante da parte degli studenti, questo facilita la verifica del raggiungimento deli obbiettivi di apprendimento.
 Inoltre con l'applicazione web si possono creare nuovi esercizi in modo flessibile ed è facile verificare se gli esercizi svolti dagli studenti siano corretti.
+E' anche possibile creare dei laboratori con dei test case predefiniti che danno un feedback immediato sullo svolgimento dell'esercizio.
 
 ## Materiale didattico per studenti
 * Slide su scope statico e dinamico (Scope staico e scope dinamico.pdf)
