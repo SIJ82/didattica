@@ -2,7 +2,7 @@ import { generate } from "astring";
 import type { CustomEditorView } from "../CustomEditor";
 import { Set_Breakpoints } from "../set_breakpoints";
 import { Set_Nesting } from "../set_nesting";
-import { Frame_Creation, Frame_Deletion, InjectStack } from "../stack";
+import { Frame_Creation, Frame_Deletion, InjectStack, stack_options } from "../stack";
 import { Visit } from "../visitor";
 import type { Visualizer } from "../visualizer";
 import { parse, type Comment } from "acorn";
@@ -19,8 +19,8 @@ const dynamic_btn = document.getElementById("dynamic_btn") as HTMLButtonElement;
 const save_btn = document.getElementById("save_btn") as HTMLButtonElement;
 const open_btn = document.getElementById("open_btn") as HTMLButtonElement;
 
-export async function Lab_Code_execution(Editor: CustomEditorView, Editor2 : CustomEditorView, visualizer:Visualizer, tests:string) {
-    await Lab_Refresh(Editor, Editor2, visualizer, tests);
+export async function Lab_Code_execution(Editor: CustomEditorView, Editor2 : CustomEditorView, visualizer:Visualizer, tests:string, dynamic:boolean) {
+    await Lab_Refresh(Editor, Editor2, visualizer, tests, dynamic);
     //@ts-ignore
     window.konsole = konsole(console); //@ts-ignore
     window._lineInfo = _lineInfo; //@ts-ignore
@@ -51,8 +51,8 @@ export async function Lab_Code_execution(Editor: CustomEditorView, Editor2 : Cus
     }
 }
 
-let always_break:boolean = true;
-export async function Lab_Refresh(Editor: CustomEditorView, Editor2: CustomEditorView, visualizer : Visualizer, tests:string) {
+export async function Lab_Refresh(Editor: CustomEditorView, Editor2: CustomEditorView, visualizer : Visualizer, tests:string, dynamic:boolean) {
+    stack_options.dynamic = dynamic;
     console.clear();
     let code = Editor.code;
     const comments : Comment[]= []
@@ -64,7 +64,8 @@ export async function Lab_Refresh(Editor: CustomEditorView, Editor2: CustomEdito
 
     //**todo** :: dovrei trasformare tutti gli if in block statement
     Set_Nesting(ast);
-    Set_Breakpoints(ast, always_break);
+    //@ts-ignore
+    Set_Breakpoints(ast, window.always_break);
     InjectStack(ast);
     
     console.log(ast);

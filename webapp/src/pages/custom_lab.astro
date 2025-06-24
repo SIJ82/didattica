@@ -1,0 +1,55 @@
+---
+import LabEditorComponent from "../components/lab_editor_component.astro"
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="/didattica/visualizer.css" rel="stylesheet">
+		<title>Laboratorio 1</title>
+	</head>
+	<body>
+		
+		<LabEditorComponent />
+		<script>
+			import { Lab_main, Lab_from_file } from "../scripts/lab_main";
+
+			Lab_from_file();
+		</script>
+		
+        <div id="obfuscate">
+            <div id="panel">
+                <h3 style="padding-bottom:20px">Carica un file di laboratorio per iniziare</h3>
+                <input type="file" id="file_input">
+
+            </div>
+        </div>
+
+        <style is:inline>
+            #obfuscate{
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.511);
+                justify-content: center;
+                align-items: center;
+            }
+
+            #panel{
+                width: 500px;
+                height: 300px;
+                background-color: white;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+	</body>
+</html>
+
+
