@@ -10,7 +10,7 @@ Esame di Didattica dell'Informatica, A.A. 2024/2025
 # Inquadramento del lavoro
 
 ## Livello di scuola, classe/i, indirizzo
-Instituti Tecnici e Professionali
+Istituti Tecnici e Professionali
 
 Indirizzo : Informatica e Telecomunicazioni
 
@@ -18,20 +18,20 @@ Disciplina : Informatica
 
 Livello : Secondo biennio e quinto anno
 
-L'attività è principalmente orientata agli ultimi anni di un indirizzo informatico, ma può essere svolta anche in altri indirizzi se ci sono sufficenti ore di Informatica e vengono soddisfatti i prerequisiti descritti di seguito nel documento.
+L'attività è principalmente orientata agli ultimi anni di un indirizzo informatico, ma può essere svolta anche in altri indirizzi se ci sono sufficienti ore di Informatica e vengono soddisfatti i prerequisiti descritti di seguito nel documento.
 
 
 ## Motivazione e Finalità
 - L'attività presenta le principali differenze tra scope statico e dinamico nei linguaggi di programmazione, tramite lezioni frontali, attività unplugged e attività di laboratorio.
 
-- Questa attività approfondisce concetti relaivi ai linguaggi di programmazione e il loro uso. 
+- Questa attività approfondisce concetti relativi ai linguaggi di programmazione e il loro uso. 
 La maggior parte dei linguaggi di programmazione utilizza scope statico e spesso è l'unico presentato agli studenti. Con questa attività si mira a rafforzare il modello mentale[4] associato all'esecuzione del codice e correggere eventuali misconcezioni[4] analizzando il comportamento dei due scope a confronto.
 
 
 ## Innovatività
 Questo è un argomento considerato avanzato e che spesso è trattato solo in ambito universitario.
-Per questa attività è stata creata un applicazione web interattiva per l'esecuzione e la visualizzazione di codice con scope statico e dinamico (Prendendo ispirazione da [Python Tutor](pythontutor.com)).
-Inoltre sono state progettate delle attività unplugged per dare un idea concreta di come si comporta il codice con i due scope.
+Per questa attività è stata creata un'applicazione web interattiva per l'esecuzione e la visualizzazione di codice con scope statico e dinamico (Prendendo ispirazione da [Python Tutor](pythontutor.com)).
+Inoltre sono state progettate delle attività unplugged per dare un'idea concreta di come si comporta il codice con i due scope.
 
 
 
@@ -51,12 +51,14 @@ Questa attività può rientrare in un percorso in cui si analizzano i vari aspet
 ## Traguardi e Obiettivi
 
 ### Traguardi/obiettivi generali dai documenti ministeriali/proposte
-- utilizzare le strategie del pensiero razionale negli aspetti dialettici ed algoritmici per affrontare situazioni
+- Utilizzare le strategie del pensiero razionale negli aspetti dialettici ed algoritmici per affrontare situazioni
 problematiche elaborando opportune soluzioni [2]
-- scegliere dispositivi e strumenti in base alle loro caratteristiche funzionali [2]
+- Scegliere dispositivi e strumenti in base alle loro caratteristiche funzionali [2]
 
 ### Traguardi/obiettivi generali
 - Visualizzare i frame delle funzioni come dei fogli di carta che si sovrappongono seguendo protocolli diversi in base allo scope.
+- Identificare e applicare strategie di risoluzione dei problemi considerando i diversi modelli di gestione della memoria e degli ambienti di esecuzione
+- Utilizzare modelli astratti e rappresentazioni mentali per visualizzare e comprendere l'evoluzione degli stati durante l'esecuzione dei programmi
 
 ### Obiettivi specifici in forma operativa
 - (Comprendere)[3] Lo studente/la studentessa è in grado di descrivere il comportamento di un programma con scope statico e dinamico
@@ -98,7 +100,7 @@ Per favorire l'introduzione del concetto di ambiente iniziamo col fare una prima
 
 ![slide 3](./media/slide_3.png)\
 
-In questo esempio si vuole far notare la differenza tra lo scope delle due variabili. "global_x" è definita nell'ambiente globale ed è visibile in tutto il programma, mentre "local_x" è definita all'interno della funzione f, qundi è visibile solo ad essa (nel suo ambiente locale).
+In questo esempio si vuole far notare la differenza tra lo scope delle due variabili. "global_x" è definita nell'ambiente globale ed è visibile in tutto il programma, mentre "local_x" è definita all'interno della funzione f, quindi è visibile solo ad essa (nel suo ambiente locale).
 
 ![slide 4](./media/slide_4.png)\
 
@@ -108,13 +110,13 @@ Si chiede agli studenti cosa stampa il codice per portarli al ragionamento e ave
 
 ![slide 5](./media/slide_5.png)\
 
-Questo esempio estende il precendete, viene dichiarata una funzione "g", ma la variabile "x" non viene dichiarata nel suo amiente globale. Per questo esempio possiamo chiedere prima agli studenti cosa stampa il codice, poichè è un concetto con cui dovrebbero essere familiari, quindi ci si può affidare alla loro intuizione. In questo modo si riesce a verificare se si sono create delle misconcezioni[4] (ad esempio che la variabile x sia quella in f poichè dichiarata per ultima).
+Questo esempio estende il precedente, viene dichiarata una funzione "g", ma la variabile "x" non viene dichiarata nel suo ambiente globale. Per questo esempio possiamo chiedere prima agli studenti cosa stampa il codice, poichè è un concetto con cui dovrebbero essere familiari, quindi ci si può affidare alla loro intuizione. In questo modo si riesce a verificare se si sono create delle misconcezioni[4] (ad esempio che la variabile x sia quella in f poichè dichiarata per ultima).
 Dopo che gli studenti hanno risposto si spiega che, poichè la "x" non è stata dichiarata nell'ambiente locale di "g" si fa riferimento all'ambiente globale.
 
 ![slide 7](./media/slide_7.png)\
 
 
-In questa slide si vuole dare l'idea di pensare agli ambienti come folgi di carta appartenenti a ogni funzione, "Global_frame" è l'ambiente globale in qui è stata dichiarata "x" con valore 10, "f" è l'ambiente locale della funzione f in cui è stata dichiarata "x" con valore 20. I due fogli vengono sovrapposti in modo da "unirli", quando si cerca il riferimento di una variabile si parte dal foglio più in alto (in questo caso f), se la variabile non è presente si passa al foglio inferiore (in questo caso Global_frame). Questo da una prima idea di visibilità di una variabile, sarà più chiaro con gli esmpi successivi e con l'attività unplugged.
+In questa slide si vuole dare l'idea di pensare agli ambienti come fogli di carta appartenenti a ogni funzione, "Global_frame" è l'ambiente globale in cui è stata dichiarata "x" con valore 10, "f" è l'ambiente locale della funzione f in cui è stata dichiarata "x" con valore 20. I due fogli vengono sovrapposti in modo da "unirli", quando si cerca il riferimento di una variabile si parte dal foglio più in alto (in questo caso f), se la variabile non è presente si passa al foglio inferiore (in questo caso Global_frame). Questo da una prima idea di visibilità di una variabile, sarà più chiaro con gli esempi successivi e con l'attività unplugged.
 
 ![slide 8](./media/slide_8.png)\
 
@@ -126,7 +128,7 @@ Qui si mostrano gli ambienti quando viene chiamata la funzione g, in questo caso
 
 ![slide 11](./media/slide_11.png)\
 
-In questo esempio ci sono più livelli di annidamento. Fino ad ora abbiamo distinto solo tra ambiente globale e locale. Qui si fa notare che l'ambiente di "g"  è dichiarato all'interno dell'ambiente di "f", quindi va sovrappposto al di sopra di esso.
+In questo esempio ci sono più livelli di annidamento. Fino ad ora abbiamo distinto solo tra ambiente globale e locale. Qui si fa notare che l'ambiente di "g"  è dichiarato all'interno dell'ambiente di "f", quindi va sovrapposto al di sopra di esso.
 
 ![slide 12](./media/slide_12.png)\
 
@@ -166,7 +168,7 @@ In questa linea si utilizza la variabile x, per trovarne il riferimento partiamo
 
 ![slide 21](./media/slide_21.png)\
 
-Quando ri ritorna da una funzione il suo ambiente viene distrutto.
+Quando si ritorna da una funzione il suo ambiente viene distrutto.
 
 ![slide 22](./media/slide_22.png)\
 
@@ -185,7 +187,7 @@ In questa linea compare la variabile x. Per trovarne il riferimento partiamo dal
 
 ![slide 26](./media/slide_26.png)\
 
-Quado si ritorna si distrugge l'ambiente di g. Dopodichè il programma termina. 
+Quando si ritorna si distrugge l'ambiente di g. Dopodichè il programma termina. 
 Chiedere agli studenti se hanno capito e se hanno domande e nel caso ripetere i passaggi poco chiari.
 
 ![slide 27](./media/slide_27.png)\
@@ -206,7 +208,7 @@ Si prenda in considerazione il codice descritto nella slide.
 
 ![slide 29](./media/slide_29.png)\
 
-L'attività si può riproporre facilmente con alri programmi, inoltre è possibile pianificare una lezione di laboratorio in cui gli studenti utilizzano l'applicazione web per sperimentare con lo scope statico e gli ambienti.
+L'attività si può riproporre facilmente con altri programmi, inoltre è possibile pianificare una lezione di laboratorio in cui gli studenti utilizzano l'applicazione web per sperimentare con lo scope statico e gli ambienti.
 Si possono assegnare esercizi come creare programmi o descrivere il comportamento di programmi forniti dal docente.
 Se gli studenti riescono a creare e descrivere comportamenti di programmi con scope statico questo è un buon indicatore che abbiano acquisito i concetti di questa lezione.
 
@@ -257,14 +259,14 @@ Viene creato l'ambiente di g e posto in cima alla pila.
 
 ![slide 41](./media/slide_41.png)\
 
-Viene stampata x, per ricavarne il lavoro scorriamo sempre la pila da cima a fondo, in questo caso vine trovata in f. Facciamo notare che il codice di g è sempre lo stesso, ma a secondo del contesto e dal chiamante stampa valori diversi.
+Viene stampata x, per ricavarne il valore scorriamo sempre la pila da cima a fondo, in questo caso viene trovata in f. Facciamo notare che il codice di g è sempre lo stesso, ma a secondo del contesto e dal chiamante stampa valori diversi.
 
 ![slide 42](./media/slide_42.png)\
 
 A termine dell'esempio si può discuterne per risolvere eventuali dubbi, si può anche mostrare l'esempio interattivo tramite l'applicazione web ([Esempio scope dinamico](https://sij82.github.io/didattica/lezione_1/esempio05/)) e proporre altri esempi.
 
 Ora si può svolgere la seconda attività unplugged. L'esecuzione è uguale alla precedente, con le seguenti differenze:
-* Ci sono 3 funzioni + scope globale, quindi sono consigliati grupppi da 4
+* Ci sono 3 funzioni + scope globale, quindi sono consigliati gruppi da 4
 * Gli studenti seguono le regole dello scope dinamico
 
 L'esercizio è disponibile anche sull'applicazione web ([Esercizio unplugged dinamico](https://sij82.github.io/didattica/lezione_1/esempio06/)), assicurarsi di attivare lo scope dinamico "👋".
@@ -273,7 +275,7 @@ Si possono proporre altri esercizi e provare a far eseguire i programmi anche co
 
 ![slide 43](./media/slide_43.png)\
 
-Al termine dell'attività unplugged e della discussione della soluzione segue una fase di discussione delle principali differenze tra scope statico e dinamico e le varie motiviazioni dietro la scelta di uno rispetto all'altro.
+Al termine dell'attività unplugged e della discussione della soluzione segue una fase di discussione delle principali differenze tra scope statico e dinamico e le varie motivazioni dietro la scelta di uno rispetto all'altro.
 
 ![slide 44](./media/slide_44.png)\
 ![slide 45](./media/slide_45.png)\
@@ -284,15 +286,15 @@ Possono seguire attività di laboratorio ricollegandosi ad altri argomenti svolt
 ### Possibili approfondimenti da proporre
 - Come vengono implementati gli ambienti 
 - Gestione dello stack
-- Static binding e dynamic bynding
+- Static binding e dynamic binding
 
 ### Valutazione
-Poichè durante le lezioni si hanno attività interattive e unplugged si riesce ad avere un feedback costante da parte degli studenti, questo facilita la verifica del raggiungimento deli obbiettivi di apprendimento.
+Poichè durante le lezioni si hanno attività interattive e unplugged si riesce ad avere un feedback costante da parte degli studenti, questo facilita la verifica del raggiungimento degli obiettivi di apprendimento.
 Inoltre con l'applicazione web si possono creare nuovi esercizi in modo flessibile ed è facile verificare se gli esercizi svolti dagli studenti siano corretti.
 E' anche possibile creare dei laboratori con dei test case predefiniti che danno un feedback immediato sullo svolgimento dell'esercizio.
 
 ## Materiale didattico per studenti
-* Slide su scope statico e dinamico (Scope staico e scope dinamico.pdf)
+* Slide su scope statico e dinamico (Scope statico e scope dinamico.pdf)
 * [Applicazione web per poter eseguire codice con sintassi javascript con scope statico e dinamico](https://sij82.github.io/didattica/)
 
 # Bibliografia
