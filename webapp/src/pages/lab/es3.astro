@@ -8,7 +8,7 @@ import LabEditorComponent from "../../components/lab_editor_component.astro"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<link href="/didattica/visualizer.css" rel="stylesheet">
-		<title>Laboratorio 1</title>
+		<title>Laboratorio 3</title>
 	</head>
 	<body>
 		
@@ -17,22 +17,31 @@ import LabEditorComponent from "../../components/lab_editor_component.astro"
 			import { Lab_main } from "../../scripts/lab_main";
 
 const code = `/*
-	Usando lo scope statico definisci una funzione contatore(x) che preso in input x,
-	incrementa il contatore e ne restituisce il valore. Il contatore è inizializzato a 0. 
-	Puoi usare una variabile globale se necessario.
+	Usando lo scope dinamico definisci una funzione Saluta() che restituisce la stringa "Ciao Pippo" se viene chiamata dalla funzione Pippo
+	e "Ciao Pluto" se viene chiamata dalla funzione Pluto().
+	Non usare variabili globali.
 	Utilizza i breakpoint per visualizzare i frame durante l'esecuzione.
 */
 
-function contatore(x){
+function Pippo(){
+  const name = "Pippo";
+  return Saluta();
+}
+
+function Pluto(){
+  const name = "Pluto";
+  return Saluta();
+}
+
+function Saluta(){
   return;
 }
 
 `;
 
 const tests =`
-_test(contatore, 1, 1)
-_test(contatore, 2, 1)
-_test(contatore, 4, 2)
+_test(Pippo, "Ciao Pippo")
+_test(Pluto, "Ciao Pluto")
 `;
 			Lab_main(code, tests);
 		</script>

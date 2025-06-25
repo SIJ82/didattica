@@ -101,6 +101,8 @@ Per favorire l'introduzione del concetto di ambiente iniziamo col fare una prima
 ![slide 3](./media/slide_3.png)\
 
 In questo esempio si vuole far notare la differenza tra lo scope delle due variabili. "global_x" è definita nell'ambiente globale ed è visibile in tutto il programma, mentre "local_x" è definita all'interno della funzione f, quindi è visibile solo ad essa (nel suo ambiente locale).
+Possibile metafora:
+- Immaginiamo lo scope globale come un prato e lo scope locale come una casa. Dal prato possiamo vedere ciò che abbiamo intorno, inclusa la casa, ma non possiamo guardare al suo interno. Dall'interno della casa invece vediamo ciò che c'è dentro e attraverso una finestra possiamo vedere ciò che c'è all'esterno.
 
 ![slide 4](./media/slide_4.png)\
 
@@ -285,7 +287,7 @@ Possono seguire attività di laboratorio ricollegandosi ad altri argomenti svolt
 
 ### Possibili approfondimenti da proporre
 - Come vengono implementati gli ambienti 
-- Gestione dello stack
+- Record di attivazione e gestione dello stack
 - Static binding e dynamic binding
 
 ### Valutazione
@@ -296,6 +298,7 @@ E' anche possibile creare dei laboratori con dei test case predefiniti che danno
 ## Materiale didattico per studenti
 * Slide su scope statico e dinamico (Scope statico e scope dinamico.pdf)
 * [Applicazione web per poter eseguire codice con sintassi javascript con scope statico e dinamico](https://sij82.github.io/didattica/)
+* ![Organizzatore grafico anticipato](./media/Organizzatore_grafico_anticipato.png)
 
 # Bibliografia
 [1] Gabbrielli, M., & Martini, S. (2005). Linguaggi di programmazione: principi e paradigmi. McGraw-Hill Italia.
